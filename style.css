@@ -1,0 +1,455 @@
+:root {
+  --red: #e52d2d;
+  --deep-red: #b71f24;
+  --navy: #10243e;
+  --blue: #1678b9;
+  --cream: #f7f1e5;
+  --paper: #fffdf8;
+  --ink: #171717;
+  --muted: #6f706f;
+  --line: #d8d2c6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+/* NAVIGATION */
+.site-nav {
+  background: rgba(247, 241, 229, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.manga-brand {
+  font-family: "Oswald", Impact, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 20px;
+}
+
+.manga-brand span {
+  color: var(--red);
+}
+
+.nav-link {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--red);
+}
+
+/* HERO */
+.hero-section {
+  min-height: 88vh;
+  padding: 90px 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(22, 120, 185, 0.15), transparent 30%),
+    linear-gradient(135deg, #f7f1e5 0%, #fffdf8 60%, #eaf5fa 100%);
+}
+
+.cover-wrap {
+  position: relative;
+  max-width: 390px;
+  margin: auto;
+}
+
+.manga-cover {
+  width: 100%;
+  display: block;
+  border: 8px solid white;
+  transform: rotate(-2deg);
+  box-shadow: 18px 22px 0 rgba(16, 36, 62, 0.08),
+              0 25px 60px rgba(16, 36, 62, 0.18);
+}
+
+.volume-stamp {
+  position: absolute;
+  right: -12px;
+  bottom: 24px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: var(--red);
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  transform: rotate(8deg);
+  box-shadow: 0 8px 25px rgba(229, 45, 45, 0.28);
+}
+
+.eyebrow,
+.section-kicker {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.display-title {
+  margin: 12px 0 0;
+  font-family: "Oswald", Impact, sans-serif;
+  font-size: clamp(70px, 10vw, 150px);
+  line-height: 0.82;
+  letter-spacing: -0.025em;
+}
+
+.volume-label {
+  margin: 28px 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--muted);
+}
+
+.romance-title {
+  font-family: "Oswald", Impact, sans-serif;
+  font-size: clamp(28px, 4vw, 52px);
+  text-transform: uppercase;
+}
+
+.hero-copy {
+  max-width: 620px;
+  line-height: 1.8;
+  color: #454545;
+  font-size: 16px;
+}
+
+.tag {
+  border: 1px solid var(--ink);
+  border-radius: 100px;
+  padding: 8px 13px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.manga-btn {
+  background: var(--red);
+  color: white;
+  border-radius: 3px;
+  padding: 14px 20px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.manga-btn:hover {
+  background: var(--deep-red);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* SHARED SECTIONS */
+section {
+  padding: 90px 0;
+}
+
+.section-heading-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  margin: 8px 0 0;
+  font-family: "Oswald", Impact, sans-serif;
+  text-transform: uppercase;
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 0.95;
+}
+
+.section-note {
+  max-width: 390px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.section-copy {
+  line-height: 1.9;
+}
+
+/* STORY */
+.story-section {
+  background: var(--navy);
+}
+
+.story-section .section-kicker {
+  color: #72c7ef;
+}
+
+.big-quote {
+  border-left: 4px solid var(--red);
+  padding: 22px 0 22px 26px;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(30px, 4vw, 54px);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+/* GALLERY */
+.gallery-section {
+  background: #f0ece3;
+}
+
+.manga-gallery {
+  align-items: stretch;
+}
+
+.manga-frame {
+  position: relative;
+  overflow: hidden;
+  background: #ded8cc;
+  border: 10px solid white;
+  box-shadow: 0 10px 30px rgba(16, 36, 62, 0.12);
+}
+
+.frame-large {
+  min-height: 420px;
+}
+
+.frame-tall {
+  min-height: 420px;
+}
+
+.frame-small {
+  min-height: 270px;
+}
+
+.frame-wide {
+  min-height: 270px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  display: block;
+  background:
+    linear-gradient(135deg, #f5f0e5, #dbeaf2);
+}
+
+
+
+.panel-label {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  padding: 6px 10px;
+  background: var(--red);
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.gallery-caption {
+  margin-top: 22px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+/* CHAPTERS */
+.chapters-section {
+  background: var(--paper);
+}
+
+.chapter-grid {
+  border-top: 1px solid var(--line);
+}
+
+.chapter-item {
+  display: grid;
+  grid-template-columns: 70px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 22px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.chapter-item:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+.chapter-number {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  color: var(--red);
+}
+
+.chapter-name {
+  font-weight: 700;
+}
+
+.chapter-page {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+/* CHARACTERS */
+.characters-section {
+  background: #f0ece3;
+}
+
+.character-card {
+  min-height: 220px;
+  padding: 28px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.character-card::after {
+  content: "";
+  position: absolute;
+  right: -35px;
+  bottom: -45px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: var(--blue);
+  opacity: 0.1;
+}
+
+.character-number {
+  font-family: "Oswald", sans-serif;
+  color: var(--red);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+.character-card h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 34px;
+  margin: 10px 0;
+}
+
+.character-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* ABOUT */
+.about-section {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.9), rgba(255,255,255,.72)),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 32px,
+      rgba(16,36,62,.04) 33px 34px
+    );
+}
+
+.fact-card {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 22px;
+}
+
+.fact-card strong {
+  display: block;
+  font-family: "Oswald", sans-serif;
+  font-size: 34px;
+  color: var(--red);
+}
+
+.fact-card span {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+/* FOOTER */
+.site-footer {
+  padding: 50px 0;
+  background: #111;
+  color: white;
+}
+
+.footer-brand {
+  font-size: 24px;
+}
+
+.site-footer p {
+  margin: 5px 0;
+  color: #999;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.footer-credit {
+  align-self: end;
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 65px 0;
+  }
+
+  section {
+    padding: 70px 0;
+  }
+
+  .section-heading-row {
+    display: block;
+  }
+
+  .section-note {
+    margin-top: 20px;
+  }
+
+  .chapter-item:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .chapter-item {
+    grid-template-columns: 55px 1fr;
+  }
+
+  .chapter-page {
+    display: none;
+  }
+
+  .frame-large,
+  .frame-tall,
+  .frame-small,
+  .frame-wide {
+    min-height: 300px;
+  }
+}
